@@ -142,3 +142,5 @@ top/fairseq-01042021/examples/roberta_tops/pretrained/
 *.zip
 *.gz
 
+*.DS_Store
+

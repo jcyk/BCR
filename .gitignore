@@ -134,7 +134,12 @@ dp/data2.2/
 dp/models/
 dp/out/
 top/checkpoints/
-top/data/
+top/data/data/
+top/data/data-bin/
+top/data/gkd-data/
+top/data/orig-data/
+top/data/orig-modif-data/
+top/data/roberta.base/
 top/data-bin/
 top/factored-span-parsing
 top/out

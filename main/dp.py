@@ -60,6 +60,21 @@ def read_trees(fname):
         trees.append(meta)
     return trees
 
+def print_tree(nidx, tree):
+    head = tree[nidx]['word']
+    added_root = False
+    linearization = "( "
+    for child in tree[nidx]["children"]:
+        _l = print_tree(child, tree)
+        if int(child) > int(nidx) and not added_root:
+            linearization += tree[nidx]['word'] + " "
+            added_root = True
+        linearization += _l + " "
+    if not added_root:
+        linearization += tree[nidx]['word'] + " "
+    linearization += ")"
+    return linearization
+
 # compare sub-trees
 def diff_u(nidx, tree_a, tree_b):
     if tree_a[nidx]["children"] != tree_b[nidx]["children"]:

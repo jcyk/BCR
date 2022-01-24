@@ -8,7 +8,7 @@ import re
 from fairseq.data.encoders.gpt2_bpe import get_encoder
 
 
-ROBERTA_PATH = "/efs/dengcai/top/data/roberta.base"
+ROBERTA_PATH = "/home/jcykcai/nonono/BCR/top/data/roberta.base"
 ENCODER_JSON_PATH = os.path.join(ROBERTA_PATH, "encoder.json")
 VOCAB_BPE_PATH = os.path.join(ROBERTA_PATH, "vocab.bpe")
 

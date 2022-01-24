@@ -4,6 +4,7 @@ import numpy as np
 import copy
 import json
 from fairseq.data.encoders.gpt2_bpe import get_encoder
+from fairseq.models.roberta import RobertaModel
 
 ROBERTA_PATH = "roberta.base"
 ENCODER_JSON_PATH = os.path.join(ROBERTA_PATH, "encoder.json")
@@ -15,6 +16,7 @@ def rolling_window(a, size):
     return np.lib.stride_tricks.as_strided(a, shape=shape, strides=strides)
 
 def process(en_in, parse_in, en_out, parse_out, remove_unsupported=False):
+
     bpe_encoder = get_encoder(ENCODER_JSON_PATH, VOCAB_BPE_PATH)
 
     after_c = 0

@@ -8,7 +8,7 @@ set -e
 
 python prepare_roberta_pointer.py --split train
 python prepare_roberta_pointer.py --split eval
-python prepare_roberta_pointer.py --split test --lines $inp.lines
+python prepare_roberta_pointer.py --split test
 
 cp roberta.base/dict.txt data/dict.en.txt
 cat data/train.parse data/eval.parse data/test.parse |
@@ -26,7 +26,7 @@ fairseq-preprocess --source-lang en --target-lang parse \
     --trainpref data/train \
     --validpref data/eval \
     --testpref data/test \
-    --destdir data-bin/rerank \
+    --destdir data-bin/top \
     --srcdict data/dict.en.txt \
     --tgtdict data/dict.parse.txt  \
     --workers 20

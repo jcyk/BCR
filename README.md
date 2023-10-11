@@ -1,5 +1,5 @@
 # MUR-SP
-This repo is for **Measuring and Reducing Model Update Regression in Structured Prediction for NLP**. NeurIPS2023
+This repo is for **Measuring and Reducing Model Update Regression in Structured Prediction for NLP**. NeurIPS2022
 
 Our experiments are on two typical structured prediction tasks, dependency parsing and conversational semantic parsing.
 
